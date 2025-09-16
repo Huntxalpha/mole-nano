@@ -1,0 +1,107 @@
+/* Styles for Mole Nano game */
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #423b62, #2c3a58);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #fff;
+}
+
+#game-container {
+  position: relative;
+  width: 320px;
+  user-select: none;
+}
+
+/* Grid layout */
+#grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+/* Individual hole styling */
+.hole {
+  background: #3a3652;
+  border-radius: 50%;
+  height: 90px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: inset 0 -4px 8px rgba(0, 0, 0, 0.3);
+  transition: background 0.2s;
+}
+
+/* Mole hidden state */
+.mole {
+  position: absolute;
+  left: 50%;
+  bottom: -100px;
+  width: 60px;
+  height: 60px;
+  margin-left: -30px;
+  background: radial-gradient(circle at 50% 50%, #e9791b, #d35400);
+  border-radius: 50%;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+  transition: bottom 0.2s;
+}
+
+/* When the mole pops up */
+.hole.up .mole {
+  bottom: 15px;
+}
+
+/* Overlays for start and end screens */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.overlay h1 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.overlay p {
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.btn {
+  background: #e76f51;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  margin-top: 0.5rem;
+}
+
+.btn:hover {
+  background: #f78c6c;
+  transform: translateY(-2px);
+}
+
+.scoreboard {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+}
