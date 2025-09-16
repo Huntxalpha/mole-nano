@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Mole Nano</title>
+    <!-- Open Graph metadata for Twitter/X preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mole Nano – tapez les taupes !" />
+    <meta property="og:description" content="Tapez les taupes qui apparaissent avant qu’elles ne disparaissent. Un mini‑jeu instantané et addictif, sans téléchargement." />
+    <!-- Utilise une image externe pour l’aperçu social, afin d’éviter les images encodées en base64 non supportées par X/Twitter. -->
+    <meta property="og:image" content="https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=600&q=80" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Tableau d'affichage du score -->
+        <div class="scoreboard">Score : <span id="score">0</span></div>
+        <!-- Grille du jeu (sera remplie dynamiquement) -->
+        <div id="grid"></div>
+        <!-- Écran de démarrage -->
+        <div id="start-overlay" class="overlay">
+            <h1>Mole Nano</h1>
+            <p>Tapez les taupes dès qu’elles apparaissent. Vous avez 30 secondes pour obtenir le meilleur score !</p>
+            <button id="start-button" class="btn">Démarrer</button>
+        </div>
+        <!-- Écran de fin de partie -->
+        <div id="end-overlay" class="overlay" style="display:none;">
+            <h2>Fin de partie</h2>
+            <p>Votre score : <span id="final-score">0</span></p>
+            <button id="restart-button" class="btn">Rejouer</button>
+            <a id="share-button" class="btn" href="#" target="_blank" rel="noopener noreferrer">Partager mon score</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
